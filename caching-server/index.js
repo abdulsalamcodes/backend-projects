@@ -20,6 +20,17 @@ const server = http.createServer(async (req, res) => {
     // Get the content type from the origin server's response
     const contentType = proxyRes.headers.get("content-type");
 
+    // check if the response is cached (for demonstration purposes)
+    const isCached = false;
+
+    // If the response is cached, set the X-Cache header to HIT
+    if (isCached) {
+      res.setHeader("X-Cache", "HIT");
+    } else {
+      // If the response is not cached, set the X-Cache header to MISS
+      res.setHeader("X-Cache", "MISS");
+    }
+
     // Set the status code and headers from the origin server's response
     res.writeHead(proxyRes.status, proxyRes.headers);
 
