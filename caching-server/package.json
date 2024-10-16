@@ -1,0 +1,21 @@
+{
+  "name": "caching-proxy",
+  "version": "1.0.0",
+  "description": "A caching server that caches responses from other servers.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "bin": {
+    "caching-proxy": "./index.js"
+  },
+  "repository": "https://github.com/abdulsalamcodes/backend-projects",
+  "author": "Abdulsalam Abodunrin",
+  "license": "MIT",
+  "dependencies": {
+    "node-cache": "^5.1.2",
+    "node-fetch": "^3.3.2"
+  }
+}
